@@ -106,9 +106,9 @@ nav a:hover{
 
 .hero-grid{
   display:grid;
-  grid-template-columns:1.2fr 0.8fr;
+  grid-template-columns:1.08fr 0.92fr;
   gap:28px;
-  align-items:center;
+  align-items:start;
 }
 
 .eyebrow{
@@ -180,6 +180,11 @@ nav a:hover{
   color:var(--text);
 }
 
+.hero-side{
+  display:grid;
+  gap:18px;
+}
+
 .hero-panel{
   background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
   border:1px solid var(--stroke);
@@ -228,6 +233,80 @@ nav a:hover{
   margin-top:4px;
   color:var(--text-dim);
   font-size:14px;
+}
+
+.qr-card{
+  background:linear-gradient(180deg, rgba(31,162,166,0.10), rgba(255,255,255,0.04));
+  border:1px solid var(--stroke);
+  border-radius:24px;
+  padding:22px;
+}
+
+.qr-card-inner{
+  background:var(--navy-2);
+  border:1px solid var(--stroke);
+  border-radius:20px;
+  padding:18px;
+}
+
+.qr-top{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+}
+
+.qr-box{
+  width:132px;
+  min-width:132px;
+  height:132px;
+  padding:8px;
+  border-radius:18px;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.qr-box img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
+.qr-copy h3{
+  margin:0 0 8px;
+  font-size:22px;
+}
+
+.qr-copy p{
+  margin:0 0 10px;
+  color:var(--text-dim);
+  font-size:15px;
+}
+
+.qr-steps{
+  margin:10px 0 0;
+  padding-left:18px;
+  color:var(--text-dim);
+  font-size:14px;
+}
+
+.qr-steps li + li{
+  margin-top:5px;
+}
+
+.qr-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:16px;
+}
+
+.qr-note{
+  margin-top:12px;
+  color:var(--text-dim);
+  font-size:13px;
 }
 
 .section{
@@ -458,6 +537,11 @@ footer{
   .section h2{
     font-size:32px;
   }
+
+  .qr-top{
+    flex-direction:column;
+    align-items:flex-start;
+  }
 }
 
 @media (max-width: 720px){
@@ -501,6 +585,12 @@ footer{
   .metric-grid{
     grid-template-columns:1fr;
   }
+
+  .qr-box{
+    width:116px;
+    min-width:116px;
+    height:116px;
+  }
 }
 </style>
 </head>
@@ -517,7 +607,7 @@ footer{
     <nav>
       <a href="#about">About</a>
       <a href="#how">How it works</a>
-      <a href="#journey">Traffic & user journey</a>
+      <a href="#journey">Traffic &amp; user journey</a>
       <a href="#retailers">Retail focus</a>
       <a href="#screenshots">Screenshots</a>
       <a href="#contact">Contact</a>
@@ -549,26 +639,71 @@ footer{
       </div>
     </div>
 
-    <div class="hero-panel">
-      <div class="hero-panel-card">
-        <h2 style="margin:0 0 10px; font-size:26px;">Built for simple product discovery</h2>
-        <p style="margin:0; color:var(--text-dim); font-size:16px;">
-          SaleScout is designed to make discounted products easier to find,
-          compare, and open on official retailer websites.
-        </p>
+    <div class="hero-side">
+      <div class="hero-panel">
+        <div class="hero-panel-card">
+          <h2 style="margin:0 0 10px; font-size:26px;">Built for simple product discovery</h2>
+          <p style="margin:0; color:var(--text-dim); font-size:16px;">
+            SaleScout is designed to make discounted products easier to find,
+            compare, and open on official retailer websites.
+          </p>
 
-        <div class="metric-grid">
-          <div class="metric">
-            <span class="metric-kicker">Focus</span>
-            <strong>30%+</strong>
-            <span>clearance discounts</span>
+          <div class="metric-grid">
+            <div class="metric">
+              <span class="metric-kicker">Focus</span>
+              <strong>30%+</strong>
+              <span>clearance discounts</span>
+            </div>
+
+            <div class="metric">
+              <span class="metric-kicker">Journey</span>
+              <strong>App → Retailer</strong>
+              <span>purchase completed off-site</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="qr-card">
+        <div class="qr-card-inner">
+          <div class="qr-top">
+            <div class="qr-box">
+              <img
+                src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fexpo.dev%2Faccounts%2Faleksandr1976%2Fprojects%2FSaleScout%2Fbuilds%2F806d13d6-1931-4e3e-b81a-c3fd15bb77d1"
+                alt="QR code for SaleScout Android preview"
+              />
+            </div>
+
+            <div class="qr-copy">
+              <h3>Try the Android preview</h3>
+              <p>
+                Scan the QR code to open the SaleScout preview build and install the
+                current Android test version.
+              </p>
+
+              <ol class="qr-steps">
+                <li>Scan the code with your phone camera.</li>
+                <li>Open the Expo install page.</li>
+                <li>Tap <strong>Install</strong> and allow app installation if prompted.</li>
+              </ol>
+            </div>
           </div>
 
-          <div class="metric">
-            <span class="metric-kicker">Journey</span>
-            <strong>App → Retailer</strong>
-            <span>purchase completed off-site</span>
+          <div class="qr-actions">
+            <a
+              class="btn btn-primary"
+              href="https://expo.dev/accounts/aleksandr1976/projects/SaleScout/builds/806d13d6-1931-4e3e-b81a-c3fd15bb77d1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open install page
+            </a>
           </div>
+
+          <p class="qr-note">
+            Live Android preview for retailer and affiliate review. The preview opens
+            through Expo’s install page before app installation.
+          </p>
         </div>
       </div>
     </div>
@@ -620,7 +755,7 @@ footer{
 <section id="journey" class="section">
   <div class="container">
     <div class="section-head">
-      <h2>Traffic & user journey</h2>
+      <h2>Traffic &amp; user journey</h2>
       <p class="lead">
         SaleScout is a mobile-first discovery platform focused on 30%+ UK clearance deals.
         Users compare products inside the app and continue to official retailer websites
