@@ -14,141 +14,94 @@
 :root{
   --navy:#071B2B;
   --navy-2:#0B263B;
-  --navy-3:#10324A;
   --teal:#1FA2A6;
   --green:#4ADE2B;
   --text:rgba(255,255,255,0.94);
   --text-dim:rgba(255,255,255,0.72);
   --stroke:rgba(255,255,255,0.10);
-  --card:rgba(255,255,255,0.05);
-  --card-strong:rgba(255,255,255,0.07);
-  --anchor-offset:96px;
 }
 
 *{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-
 body{
   margin:0;
   font-family:Arial, Helvetica, sans-serif;
   background:var(--navy);
   color:var(--text);
-  line-height:1.5;
 }
 
-a{color:inherit;}
-
 .container{
-  max-width:1120px;
+  max-width:1100px;
   margin:auto;
-  padding:0 20px;
+  padding:40px 20px;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:20;
-  background:rgba(11,38,59,0.94);
+  background:var(--navy-2);
   border-bottom:1px solid var(--stroke);
 }
 
 .nav{
-  min-height:76px;
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:20px;
+  align-items:center;
 }
 
 .logo{
   display:flex;
   align-items:center;
-  gap:12px;
+  gap:10px;
   font-size:22px;
   font-weight:800;
 }
 
 .logo img{
-  width:42px;
-  height:42px;
-  border-radius:10px;
-}
-
-nav{
-  display:flex;
-  gap:18px;
+  width:40px;
+  border-radius:8px;
 }
 
 nav a{
+  margin-left:20px;
   text-decoration:none;
-  font-weight:700;
-  opacity:0.84;
+  color:white;
+  font-weight:600;
+  opacity:0.8;
 }
 
-nav a:hover{opacity:1;}
-
-.hero{padding:76px 0 52px;}
-
-.hero-grid{
+.hero{
   display:grid;
-  grid-template-columns:1.08fr 0.92fr;
-  gap:28px;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
 }
 
-.eyebrow{
-  padding:8px 14px;
-  border-radius:999px;
-  background:rgba(31,162,166,0.14);
-  border:1px solid rgba(31,162,166,0.30);
-  font-size:13px;
-  font-weight:800;
-}
-
-.hero h1{font-size:52px;}
-
-.hero p{color:var(--text-dim);}
-
-.hero-points{
-  list-style:none;
-  padding:0;
-  margin-top:20px;
-}
-
-.hero-actions{
-  display:flex;
-  gap:12px;
-  margin-top:20px;
+.hero h1{
+  font-size:48px;
 }
 
 .btn{
   padding:12px 18px;
-  border-radius:12px;
-  font-weight:800;
+  border-radius:10px;
+  font-weight:700;
   text-decoration:none;
 }
 
-.btn-primary{background:var(--teal);}
-.btn-secondary{border:1px solid var(--stroke);}
-
-.hero-side{display:grid;gap:18px;}
-
-.hero-panel{
-  border:1px solid var(--stroke);
-  border-radius:20px;
-  padding:18px;
+.btn-primary{
+  background:var(--teal);
+  color:white;
 }
 
 .qr-card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:16px;
   border:1px solid var(--stroke);
-  border-radius:20px;
-  padding:18px;
 }
 
 .qr-box{
-  width:140px;
-  height:140px;
+  width:150px;
+  height:150px;
   background:#fff;
-  border-radius:16px;
+  border-radius:12px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -156,10 +109,33 @@ nav a:hover{opacity:1;}
 
 .qr-box img{width:100%;}
 
-.qr-note{
+.badge{
+  margin-top:12px;
+  display:inline-block;
+  background:rgba(255,255,255,0.08);
+  padding:8px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:700;
+  border:1px solid var(--stroke);
+}
+
+.note{
   margin-top:12px;
   font-size:13px;
   color:var(--text-dim);
+}
+
+.section{
+  margin-top:60px;
+}
+
+footer{
+  margin-top:60px;
+  padding:30px;
+  background:var(--navy-2);
+  text-align:center;
+  border-top:1px solid var(--stroke);
 }
 </style>
 </head>
@@ -167,88 +143,76 @@ nav a:hover{opacity:1;}
 <body>
 
 <header>
-  <div class="container nav">
-    <div class="logo">
-      <img src="assets/images/icon.png" />
-      <span>SaleScout</span>
-    </div>
+<div class="container nav">
+<div class="logo">
+<img src="assets/images/icon.png">
+<span>SaleScout</span>
+</div>
 
-    <nav>
-      <a href="#about">About</a>
-      <a href="#how">How it works</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
+<nav>
+<a href="#about">About</a>
+<a href="#how">How it works</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
 </header>
 
-<section class="hero">
-  <div class="container hero-grid">
-    <div>
-      <span class="eyebrow">UK clearance deals • 30%+</span>
-      <h1>UK clearance deals in one place</h1>
+<div class="container hero">
 
-      <p>
-        Discover 30%+ discounted products from UK retailers and go directly
-        to official websites to complete purchases.
-      </p>
+<div>
+<h1>UK clearance deals 30%+</h1>
+<p>All clearance deals in one place.</p>
 
-      <ul class="hero-points">
-        <li>Browse 30%+ clearance deals</li>
-        <li>Compare prices and savings</li>
-        <li>Open retailer website to buy</li>
-      </ul>
+<br>
 
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="#screenshots">View screenshots</a>
-        <a class="btn btn-secondary" href="#contact">Business contact</a>
-      </div>
-    </div>
+<a class="btn btn-primary" href="#screenshots">View app</a>
 
-    <div class="hero-side">
-      <div class="hero-panel">
-        <h3>Try the Android preview</h3>
-        <p>Scan QR to install latest version</p>
+</div>
 
-        <div class="qr-box">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fexpo.dev%2Faccounts%2Faleksandr1976%2Fprojects%2FSaleScout%2Fbuilds%2F138fffb8-f9d9-475a-ba21-324785309517">
-        </div>
+<div class="qr-card">
 
-        <div class="hero-actions" style="margin-top:16px;">
-          <a class="btn btn-primary" href="https://expo.dev/accounts/aleksandr1976/projects/SaleScout/builds/138fffb8-f9d9-475a-ba21-324785309517">
-            Open install page
-          </a>
-        </div>
+<h3>Install Android preview</h3>
 
-        <!-- NEW NOTE ADDED HERE -->
-        <p class="qr-note">
-          Live Android preview for retailer and affiliate review. SaleScout is actively being improved as more retailers and live deal sources are added.
-        </p>
+<div class="qr-box">
+<img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fexpo.dev%2Faccounts%2Faleksandr1976%2Fprojects%2FSaleScout%2Fbuilds%2F138fffb8-f9d9-475a-ba21-324785309517">
+</div>
 
-      </div>
-    </div>
-  </div>
-</section>
+<br>
 
-<section id="about" class="section">
-  <div class="container">
-    <h2>About</h2>
-    <p>SaleScout is a mobile app focused on UK clearance deals (30%+ discounts).</p>
-  </div>
-</section>
+<a class="btn btn-primary" href="https://expo.dev/accounts/aleksandr1976/projects/SaleScout/builds/138fffb8-f9d9-475a-ba21-324785309517">
+Open install page
+</a>
 
-<section id="how" class="section">
-  <div class="container">
-    <h2>How it works</h2>
-    <p>Browse → Compare → Open retailer</p>
-  </div>
-</section>
+<div class="badge">
+Google Play version coming soon
+</div>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Contact</h2>
-    <p>Email: contact@salescout.app</p>
-  </div>
-</section>
+<p class="note">
+Live Android preview for retailer and affiliate review. SaleScout is actively being improved as more retailers and live deal sources are added.
+</p>
+
+</div>
+
+</div>
+
+<div id="about" class="container section">
+<h2>About</h2>
+<p>SaleScout aggregates UK clearance deals with 30%+ discounts.</p>
+</div>
+
+<div id="how" class="container section">
+<h2>How it works</h2>
+<p>Browse → Compare → Open retailer website</p>
+</div>
+
+<div id="contact" class="container section">
+<h2>Contact</h2>
+<p>Email: contact@salescout.app</p>
+</div>
+
+<footer>
+SaleScout – UK clearance deals
+</footer>
 
 </body>
 </html>
