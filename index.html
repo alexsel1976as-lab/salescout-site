@@ -513,6 +513,30 @@ footer{
   color:var(--text-dim);
 }
 
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+}
+
+.footer-links a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:700;
+  opacity:0.9;
+}
+
+.footer-links a:hover{
+  opacity:1;
+  text-decoration:underline;
+}
+
+.footer-disclaimer{
+  max-width:880px;
+  margin:0 auto;
+}
+
 #about,
 #how,
 #journey,
@@ -924,6 +948,14 @@ footer{
   <div class="container footer-inner">
     <p><strong>Clearza</strong> – UK clearance deals in one place.</p>
     <p>Users browse deals in the app and complete purchases on retailer websites.</p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+    <p class="footer-disclaimer">
+      Some links may be affiliate links. Clearza may earn a commission at no extra cost to the user.
+    </p>
   </div>
 </footer>
 
