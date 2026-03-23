@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact – Clearza</title>
+<meta
+  name="description"
+  content="Contact Clearza for business, retailer, and affiliate enquiries."
+/>
+<style>
+:root{
+  --navy:#071B2B;
+  --navy-2:#0B263B;
+  --text:rgba(255,255,255,0.94);
+  --text-dim:rgba(255,255,255,0.72);
+  --stroke:rgba(255,255,255,0.10);
+  --card:rgba(255,255,255,0.05);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--navy);
+  color:var(--text);
+  line-height:1.6;
+}
+
+a{
+  color:inherit;
+}
+
+.container{
+  max-width:920px;
+  margin:auto;
+  padding:0 20px;
+}
+
+header{
+  border-bottom:1px solid var(--stroke);
+  background:rgba(11,38,59,0.94);
+}
+
+.header-inner{
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:22px;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.logo img{
+  width:42px;
+  height:42px;
+  border-radius:10px;
+}
+
+.back-link{
+  text-decoration:none;
+  font-weight:700;
+  color:var(--text-dim);
+}
+
+main{
+  padding:44px 0 56px;
+}
+
+.page-card{
+  background:var(--card);
+  border:1px solid var(--stroke);
+  border-radius:22px;
+  padding:28px;
+}
+
+h1{
+  margin:0 0 8px;
+  font-size:40px;
+  line-height:1.05;
+}
+
+p{
+  margin:0 0 14px;
+  color:var(--text-dim);
+  font-size:17px;
+}
+
+.contact-line{
+  font-size:21px;
+  font-weight:800;
+  color:var(--text);
+}
+
+footer{
+  border-top:1px solid var(--stroke);
+  background:var(--navy-2);
+  padding:24px 0 30px;
+}
+
+.footer-inner{
+  text-align:center;
+}
+
+.footer-inner p{
+  margin:0;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin-top:12px;
+}
+
+.footer-links a{
+  text-decoration:none;
+  font-weight:700;
+  color:var(--text);
+}
+
+.footer-links a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="/index.html">
+      <img src="assets/images/icon.png" alt="Clearza app icon" />
+      <span>Clearza</span>
+    </a>
+    <a class="back-link" href="/index.html">Back to home</a>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="page-card">
+      <h1>Contact</h1>
+      <p>
+        For retailer partnerships, affiliate network enquiries, or general business contact,
+        please get in touch.
+      </p>
+
+      <p class="contact-line">
+        Email:
+        <a href="mailto:contact@clearza.uk">contact@clearza.uk</a>
+      </p>
+
+      <p>
+        Clearza aggregates publicly available clearance deals and directs users to official
+        retailer websites to complete purchases.
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p><strong>Clearza</strong> – UK clearance deals in one place.</p>
+    <div class="footer-links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms &amp; Conditions</a>
+      <a href="/contact.html">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
