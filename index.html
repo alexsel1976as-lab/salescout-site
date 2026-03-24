@@ -235,27 +235,32 @@ nav a:hover{
   font-size:14px;
 }
 
-.qr-card{
+.preview-stack{
+  display:grid;
+  gap:18px;
+}
+
+.preview-card{
   background:linear-gradient(180deg, rgba(31,162,166,0.10), rgba(255,255,255,0.04));
   border:1px solid var(--stroke);
   border-radius:24px;
   padding:22px;
 }
 
-.qr-card-inner{
+.preview-card-inner{
   background:var(--navy-2);
   border:1px solid var(--stroke);
   border-radius:20px;
   padding:18px;
 }
 
-.qr-top{
+.preview-top{
   display:flex;
   align-items:flex-start;
   gap:18px;
 }
 
-.qr-box{
+.preview-box{
   width:132px;
   min-width:132px;
   height:132px;
@@ -267,46 +272,97 @@ nav a:hover{
   justify-content:center;
 }
 
-.qr-box img{
+.preview-box img{
   width:100%;
   height:100%;
   object-fit:contain;
   display:block;
 }
 
-.qr-copy h3{
+.preview-copy h3{
   margin:0 0 8px;
   font-size:22px;
 }
 
-.qr-copy p{
+.preview-copy p{
   margin:0 0 10px;
   color:var(--text-dim);
   font-size:15px;
 }
 
-.qr-steps{
+.preview-steps{
   margin:10px 0 0;
   padding-left:18px;
   color:var(--text-dim);
   font-size:14px;
 }
 
-.qr-steps li + li{
+.preview-steps li + li{
   margin-top:5px;
 }
 
-.qr-actions{
+.preview-actions{
   display:flex;
   flex-wrap:wrap;
   gap:10px;
   margin-top:16px;
 }
 
-.qr-note{
+.preview-note{
   margin-top:12px;
   color:var(--text-dim);
   font-size:13px;
+}
+
+.apple-badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:132px;
+  min-width:132px;
+  height:132px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+  border:1px solid var(--stroke);
+  font-size:46px;
+  font-weight:800;
+  color:var(--text);
+}
+
+.code-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:132px;
+  min-width:132px;
+  height:132px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
+  border:1px solid var(--stroke);
+  padding:14px;
+  text-align:center;
+}
+
+.code-box span{
+  display:block;
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:1.2px;
+  line-height:1.25;
+}
+
+.code-pill{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 14px;
+  border-radius:12px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid var(--stroke);
+  font-size:15px;
+  font-weight:800;
+  letter-spacing:0.4px;
 }
 
 .section{
@@ -562,7 +618,7 @@ footer{
     font-size:32px;
   }
 
-  .qr-top{
+  .preview-top{
     flex-direction:column;
     align-items:flex-start;
   }
@@ -610,10 +666,16 @@ footer{
     grid-template-columns:1fr;
   }
 
-  .qr-box{
+  .preview-box,
+  .apple-badge,
+  .code-box{
     width:116px;
     min-width:116px;
     height:116px;
+  }
+
+  .code-box span{
+    font-size:18px;
   }
 }
 </style>
@@ -688,46 +750,113 @@ footer{
         </div>
       </div>
 
-      <div class="qr-card">
-        <div class="qr-card-inner">
-          <div class="qr-top">
-            <div class="qr-box">
-              <img
-                src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fexpo.dev%2Faccounts%2Faleksandr1976%2Fprojects%2FSaleScout%2Fbuilds%2F138fffb8-f9d9-475a-ba21-324785309517"
-                alt="QR code for Clearza Android preview"
-              />
+      <div class="preview-stack">
+        <div class="preview-card">
+          <div class="preview-card-inner">
+            <div class="preview-top">
+              <div class="preview-box">
+                <img
+                  src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https%3A%2F%2Fexpo.dev%2Faccounts%2Faleksandr1976%2Fprojects%2FSaleScout%2Fbuilds%2F138fffb8-f9d9-475a-ba21-324785309517"
+                  alt="QR code for Clearza Android preview"
+                />
+              </div>
+
+              <div class="preview-copy">
+                <h3>Try the Android preview</h3>
+                <p>
+                  Scan the QR code to open the Clearza preview build and install the
+                  current Android test version.
+                </p>
+
+                <ol class="preview-steps">
+                  <li>Scan the code with your phone camera.</li>
+                  <li>Open the Expo install page.</li>
+                  <li>Tap <strong>Install</strong> and allow app installation if prompted.</li>
+                </ol>
+              </div>
             </div>
 
-            <div class="qr-copy">
-              <h3>Try the Android preview</h3>
-              <p>
-                Scan the QR code to open the Clearza preview build and install the
-                current Android test version.
-              </p>
-
-              <ol class="qr-steps">
-                <li>Scan the code with your phone camera.</li>
-                <li>Open the Expo install page.</li>
-                <li>Tap <strong>Install</strong> and allow app installation if prompted.</li>
-              </ol>
+            <div class="preview-actions">
+              <a
+                class="btn btn-primary"
+                href="https://expo.dev/accounts/aleksandr1976/projects/SaleScout/builds/138fffb8-f9d9-475a-ba21-324785309517"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Open Android install page
+              </a>
             </div>
-          </div>
 
-          <div class="qr-actions">
-            <a
-              class="btn btn-primary"
-              href="https://expo.dev/accounts/aleksandr1976/projects/SaleScout/builds/138fffb8-f9d9-475a-ba21-324785309517"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open install page
-            </a>
+            <p class="preview-note">
+              Live Android preview for retailer and affiliate review. The preview opens
+              through Expo’s install page before app installation.
+            </p>
           </div>
+        </div>
 
-          <p class="qr-note">
-            Live Android preview for retailer and affiliate review. The preview opens
-            through Expo’s install page before app installation.
-          </p>
+        <div class="preview-card">
+          <div class="preview-card-inner">
+            <div class="preview-top">
+              <div class="apple-badge" aria-hidden="true"></div>
+
+              <div class="preview-copy">
+                <h3>iPhone &amp; iPad testing via TestFlight</h3>
+                <p>
+                  Clearza is also available for iOS testing through Apple TestFlight.
+                  The iOS build is active and ready for reviewer, retailer, and partner testing.
+                </p>
+
+                <ol class="preview-steps">
+                  <li>Install Apple TestFlight from the App Store.</li>
+                  <li>Use an invited Apple ID to access the Clearza build.</li>
+                  <li>Open the app and test the live browsing experience on iPhone or iPad.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="preview-actions">
+              <a class="btn btn-primary" href="mailto:contact@clearza.uk?subject=Clearza%20iOS%20TestFlight%20Access">Request iOS access</a>
+              <a class="btn btn-secondary" href="#contact">Business contact</a>
+            </div>
+
+            <p class="preview-note">
+              iOS preview is distributed through Apple TestFlight. Access can be arranged through
+              <strong>contact@clearza.uk</strong>.
+            </p>
+          </div>
+        </div>
+
+        <div class="preview-card">
+          <div class="preview-card-inner">
+            <div class="preview-top">
+              <div class="code-box" aria-hidden="true">
+                <span>ACCESS<br />CODE</span>
+              </div>
+
+              <div class="preview-copy">
+                <h3>Optional reviewer access code section</h3>
+                <p>
+                  This block gives you a place to show an Apple review code, partner code,
+                  or private beta code directly on the landing page when needed.
+                </p>
+
+                <ol class="preview-steps">
+                  <li>Replace the placeholder code below with your real code when ready.</li>
+                  <li>Keep this section if you want non-technical reviewers to see the code clearly.</li>
+                  <li>Delete this whole card later if you decide not to show any code publicly.</li>
+                </ol>
+              </div>
+            </div>
+
+            <div class="preview-actions">
+              <div class="code-pill">CODE: CLEARZA-IOS</div>
+              <a class="btn btn-secondary" href="#contact">Need access help?</a>
+            </div>
+
+            <p class="preview-note">
+              Placeholder code only. Replace <strong>CLEARZA-IOS</strong> with your real reviewer or partner code if you want to publish one here.
+            </p>
+          </div>
         </div>
       </div>
     </div>
