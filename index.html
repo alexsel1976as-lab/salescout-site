@@ -167,6 +167,7 @@ nav a:hover{
   text-decoration:none;
   font-weight:800;
   border:1px solid transparent;
+  text-align:center;
 }
 
 .btn-primary{
@@ -279,6 +280,34 @@ nav a:hover{
   display:block;
 }
 
+.apple-badge{
+  width:132px;
+  min-width:132px;
+  height:132px;
+  border-radius:18px;
+  background:linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.04));
+  border:1px solid var(--stroke);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:12px;
+  text-align:center;
+}
+
+.apple-badge-icon{
+  font-size:42px;
+  line-height:1;
+  margin-bottom:8px;
+}
+
+.apple-badge-text{
+  font-size:15px;
+  font-weight:800;
+  color:var(--text);
+  line-height:1.2;
+}
+
 .preview-copy h3{
   margin:0 0 8px;
   font-size:22px;
@@ -312,57 +341,6 @@ nav a:hover{
   margin-top:12px;
   color:var(--text-dim);
   font-size:13px;
-}
-
-.apple-badge{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:132px;
-  min-width:132px;
-  height:132px;
-  border-radius:18px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
-  border:1px solid var(--stroke);
-  font-size:46px;
-  font-weight:800;
-  color:var(--text);
-}
-
-.code-box{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:132px;
-  min-width:132px;
-  height:132px;
-  border-radius:18px;
-  background:linear-gradient(180deg, rgba(255,255,255,0.14), rgba(255,255,255,0.06));
-  border:1px solid var(--stroke);
-  padding:14px;
-  text-align:center;
-}
-
-.code-box span{
-  display:block;
-  font-size:20px;
-  font-weight:800;
-  letter-spacing:1.2px;
-  line-height:1.25;
-}
-
-.code-pill{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:42px;
-  padding:0 14px;
-  border-radius:12px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid var(--stroke);
-  font-size:15px;
-  font-weight:800;
-  letter-spacing:0.4px;
 }
 
 .section{
@@ -560,6 +538,7 @@ footer{
 .footer-inner{
   display:flex;
   flex-direction:column;
+  align-items:center;
   gap:10px;
   text-align:center;
 }
@@ -591,14 +570,10 @@ footer{
 .footer-disclaimer{
   max-width:880px;
   margin:0 auto;
+  text-align:center;
 }
 
-#about,
-#how,
-#journey,
-#retailers,
-#screenshots,
-#contact{
+#about, #how, #journey, #retailers, #screenshots, #contact{
   scroll-margin-top:var(--anchor-offset);
 }
 
@@ -667,15 +642,18 @@ footer{
   }
 
   .preview-box,
-  .apple-badge,
-  .code-box{
+  .apple-badge{
     width:116px;
     min-width:116px;
     height:116px;
   }
 
-  .code-box span{
-    font-size:18px;
+  .apple-badge-icon{
+    font-size:36px;
+  }
+
+  .apple-badge-text{
+    font-size:14px;
   }
 }
 </style>
@@ -797,13 +775,16 @@ footer{
         <div class="preview-card">
           <div class="preview-card-inner">
             <div class="preview-top">
-              <div class="apple-badge" aria-hidden="true"></div>
+              <div class="apple-badge" aria-hidden="true">
+                <div class="apple-badge-icon"></div>
+                <div class="apple-badge-text">TestFlight</div>
+              </div>
 
               <div class="preview-copy">
                 <h3>iPhone &amp; iPad testing via TestFlight</h3>
                 <p>
-                  Clearza is also available for iOS testing through Apple TestFlight.
-                  The iOS build is active and ready for reviewer, retailer, and partner testing.
+                  Clearza is also available for iOS testing through Apple TestFlight. The
+                  iOS build is active and ready for reviewer, retailer, and partner testing.
                 </p>
 
                 <ol class="preview-steps">
@@ -815,46 +796,13 @@ footer{
             </div>
 
             <div class="preview-actions">
-              <a class="btn btn-primary" href="mailto:contact@clearza.uk?subject=Clearza%20iOS%20TestFlight%20Access">Request iOS access</a>
+              <a class="btn btn-primary" href="mailto:contact@clearza.uk">Request iOS access</a>
               <a class="btn btn-secondary" href="#contact">Business contact</a>
             </div>
 
             <p class="preview-note">
-              iOS preview is distributed through Apple TestFlight. Access can be arranged through
-              <strong>contact@clearza.uk</strong>.
-            </p>
-          </div>
-        </div>
-
-        <div class="preview-card">
-          <div class="preview-card-inner">
-            <div class="preview-top">
-              <div class="code-box" aria-hidden="true">
-                <span>ACCESS<br />CODE</span>
-              </div>
-
-              <div class="preview-copy">
-                <h3>Optional reviewer access code section</h3>
-                <p>
-                  This block gives you a place to show an Apple review code, partner code,
-                  or private beta code directly on the landing page when needed.
-                </p>
-
-                <ol class="preview-steps">
-                  <li>Replace the placeholder code below with your real code when ready.</li>
-                  <li>Keep this section if you want non-technical reviewers to see the code clearly.</li>
-                  <li>Delete this whole card later if you decide not to show any code publicly.</li>
-                </ol>
-              </div>
-            </div>
-
-            <div class="preview-actions">
-              <div class="code-pill">CODE: CLEARZA-IOS</div>
-              <a class="btn btn-secondary" href="#contact">Need access help?</a>
-            </div>
-
-            <p class="preview-note">
-              Placeholder code only. Replace <strong>CLEARZA-IOS</strong> with your real reviewer or partner code if you want to publish one here.
+              iOS preview is distributed through Apple TestFlight. Access can be arranged
+              through <strong>contact@clearza.uk</strong>.
             </p>
           </div>
         </div>
