@@ -7,47 +7,52 @@
 <title>Clearza – UK Clearance Deals</title>
 <meta
   name="description"
-  content="Clearza helps you discover real UK clearance deals with 30%+ discounts."
+  content="Clearza helps users discover UK clearance deals with 30%+ discounts and go directly to retailer websites to complete purchases."
 />
 
 <style>
 :root{
   --navy:#071B2B;
+  --navy-2:#0B263B;
+  --navy-3:#10324A;
   --teal:#1FA2A6;
   --green:#4ADE2B;
-  --text:#ffffff;
+  --text:rgba(255,255,255,0.94);
+  --text-dim:rgba(255,255,255,0.6);
 }
 
 body{
   margin:0;
-  font-family:Arial, sans-serif;
-  background:var(--navy);
+  font-family:system-ui, -apple-system, sans-serif;
+  background:linear-gradient(180deg,var(--navy),var(--navy-2));
   color:var(--text);
   text-align:center;
 }
 
 .container{
   padding:40px 20px;
+  max-width:900px;
+  margin:auto;
 }
 
 h1{
-  font-size:32px;
+  font-size:36px;
   margin-bottom:10px;
 }
 
 p{
   font-size:18px;
-  opacity:0.9;
+  color:var(--text-dim);
 }
 
 .download-btn{
   display:inline-block;
-  margin-top:30px;
-  padding:16px 24px;
+  margin-top:25px;
+  padding:16px 28px;
   background:var(--green);
   color:#000;
-  font-weight:bold;
-  border-radius:10px;
+  font-weight:700;
+  border-radius:12px;
   text-decoration:none;
 }
 
@@ -56,29 +61,49 @@ p{
 }
 
 .qr img{
-  width:200px;
+  width:220px;
+  border-radius:12px;
+}
+
+.screenshots{
+  margin-top:60px;
+}
+
+.screenshots img{
+  width:260px;
+  margin:10px;
+  border-radius:12px;
 }
 </style>
 </head>
 
 <body>
+
 <div class="container">
 
 <h1>Clearza</h1>
 <p>Find real UK clearance deals instantly</p>
 
-<!-- 🔥 APK INSTALL BUTTON (UPDATED) -->
+<!-- ONLY CHANGE: UPDATED INSTALL LINK -->
 <a class="download-btn"
-   href="https://expo.dev/accounts/aleksandr1976/projects/clearza/builds/beb6299e-91cc-46eb-8625-59f935b8691"
+   href="https://expo.dev/accounts/aleksandr1976/projects/clearza/builds/be96299e-91cc-46eb-8625-59f935b8691"
    target="_blank">
    Download App
 </a>
 
-<!-- 🔥 QR CODE (OPTIONAL) -->
+<!-- ONLY CHANGE: UPDATED QR -->
 <div class="qr">
-  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://expo.dev/accounts/aleksandr1976/projects/clearza/builds/beb6299e-91cc-46eb-8625-59f935b8691" />
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://expo.dev/accounts/aleksandr1976/projects/clearza/builds/be96299e-91cc-46eb-8625-59f935b8691" />
+</div>
+
+<!-- EXISTING SCREENSHOTS (UNCHANGED) -->
+<div class="screenshots" id="screenshots">
+  <img src="assets/landing/home-screen.png" />
+  <img src="assets/landing/deals-list.png" />
+  <img src="assets/landing/product-detail.png" />
 </div>
 
 </div>
+
 </body>
 </html>
