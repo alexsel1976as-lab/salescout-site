@@ -680,6 +680,38 @@ footer{
     font-size:12px;
   }
 }
+
+/* Clearza 2026 consumer-first visual refresh */
+:root{--navy:#081d2c;--teal:#0e9e9e;--text:#142a3b;--text-dim:#5d7080;--stroke:#e4edf1;--card:#fff;--card-strong:#f2f7f9}
+body{background:#fff;color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.6}
+header{background:#fff;border-bottom:1px solid #e7eef2;box-shadow:0 3px 20px rgba(8,29,44,.035)}
+.logo{color:#092438}.logo img{border-radius:12px}nav a{color:#1b3a4b;opacity:.8;font-size:14px}nav a:hover{color:#0e9e9e}
+.hero{background:radial-gradient(circle at 85% 25%,#17465b 0%,transparent 38%),linear-gradient(120deg,#071b2b,#0b2c3e);color:#fff;padding:88px 0 95px;overflow:hidden}
+.hero-grid{grid-template-columns:1fr 1fr;align-items:center;gap:70px}
+.hero h1{font-size:clamp(44px,5vw,72px);letter-spacing:-2.6px;line-height:1.05;margin:22px 0 24px;max-width:680px}
+.hero .accent{color:#5ce2d4}.hero p{color:#d0dfe6;font-size:19px;max-width:580px}
+.eyebrow{font-size:12px;letter-spacing:1.2px;background:rgba(92,226,212,.1);border:1px solid rgba(92,226,212,.35);color:#abf7ec}
+.hero-actions{gap:12px;margin-top:32px}.btn{border-radius:12px;min-height:52px;padding:0 21px;transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.12)}
+.btn-primary{background:#16aaa7;color:white}.btn-light{background:white;color:#0a2939}.btn-secondary{color:#183649;border-color:#d9e4e9;background:#f7fafb}
+.hero-trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:30px;font-size:13px;color:#bfe9e3;font-weight:700}
+.hero-visual{min-height:525px;position:relative;display:flex;align-items:center;justify-content:center}
+.visual-orb{position:absolute;border-radius:50%;filter:blur(2px)}.orb-one{width:360px;height:360px;background:rgba(35,173,172,.19);top:12%;left:9%}.orb-two{width:190px;height:190px;background:rgba(85,222,197,.13);bottom:5%;right:4%}
+.phone-frame{position:relative;z-index:1;width:255px;height:510px;padding:12px 10px;border:6px solid #243746;border-radius:38px;background:#071724;box-shadow:0 32px 75px rgba(0,0,0,.45);transform:rotate(5deg);overflow:hidden}
+.phone-frame img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:23px;display:block;background:#092539}
+.phone-notch{position:absolute;top:13px;left:50%;transform:translateX(-50%);width:75px;height:16px;border-radius:0 0 14px 14px;background:#071724;z-index:2}
+.float-label{position:absolute;z-index:2;background:white;color:#133244;border-radius:14px;padding:12px 16px;box-shadow:0 12px 35px rgba(0,0,0,.18);font-size:13px;font-weight:800}
+.float-top{left:0;top:90px}.float-bottom{right:0;bottom:90px;display:flex;flex-direction:column}.float-bottom strong{color:#0d9994;font-size:22px}.float-bottom small{font-size:11px;color:#627785}
+.section{padding:72px 0}.section-head{max-width:800px;margin-bottom:32px}.section h2{font-size:clamp(30px,3vw,43px);line-height:1.16;letter-spacing:-1px;color:#102b3c}
+.section p.lead{color:#5b7080}.section-kicker,.store-eyebrow{font-size:12px;font-weight:800;letter-spacing:1.7px;color:#0d9792}
+.showcase{background:#f5f9fa}.showcase-head{max-width:none;display:flex;align-items:end;justify-content:space-between;gap:20px}.showcase-head>div{max-width:700px}.text-link{color:#087e7b;font-weight:800;text-decoration:none;white-space:nowrap}
+.category-showcase{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}.category-tile{padding:26px 22px;border:1px solid #e4eef0;border-radius:20px;background:#fff;color:#183344;text-decoration:none;min-height:210px;transition:transform .2s,box-shadow .2s}.category-tile:hover{transform:translateY(-5px);box-shadow:0 18px 30px rgba(15,58,69,.1)}.category-icon{width:62px;height:62px;display:grid;place-items:center;border-radius:17px;background:#e5f8f5;color:#0c9891;font-size:36px;margin-bottom:20px}.category-tile:nth-child(2) .category-icon{background:#e9f0ff;color:#4d6bcb}.category-tile:nth-child(3) .category-icon{background:#fff1e8;color:#c37d45}.category-tile:nth-child(4) .category-icon{background:#f3edff;color:#8563bf}.category-tile h3{font-size:19px;margin:0 0 6px}.category-tile p{font-size:14px;margin:0;color:#667988}
+.download-section{background:#0a2739}.download-section h2,.download-section .section-kicker{color:#fff}.download-section .lead{color:#c3d6df!important}.download-head{text-align:center;margin:0 auto 34px}
+.download-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.download-card{display:flex;align-items:center;gap:22px;background:#fff;border-radius:20px;padding:26px;color:#163347;min-width:0}.download-card h3{font-size:26px;margin:5px 0 6px}.download-card p{color:#5f7180;margin:0 0 18px;font-size:15px}.download-qr{background:#fff;border:1px solid #e0e9ed;border-radius:14px;padding:8px;flex:0 0 130px}.download-qr img{width:100%;display:block}
+.cards .card,.info-box,.screenshot,.disclosure,.contact-box{background:#fff;border:1px solid #e4ebef;box-shadow:0 5px 20px rgba(18,56,70,.035)}.card p,.info-box ul,.screenshot p,.disclosure p,.contact-box p{color:#5c7180}.card h3,.info-box h3,.screenshot h3{color:#153346}.retailer{background:#eff8f7;border-color:#d7eeeb;color:#176a69}.screenshots{grid-template-columns:repeat(2,minmax(0,1fr))}.screenshot img{max-height:430px;object-fit:contain;background:#f4f8f9}.contact-box{background:#f5faf9}.contact-line a{color:#078984}
+footer{background:#081e2e;color:#fff}footer .footer-links a{color:#fff}footer p{color:#b6cad4!important}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:20px}.hero-visual{min-height:480px}.category-showcase{grid-template-columns:repeat(2,minmax(0,1fr))}.download-grid{grid-template-columns:1fr}.showcase-head{align-items:start;flex-direction:column}}
+@media(max-width:720px){.hero{padding:54px 0 55px}.hero h1{font-size:clamp(37px,9vw,52px);letter-spacing:-1.5px}.hero p{font-size:16px}.hero-visual{min-height:430px}.phone-frame{width:210px;height:415px}.float-top{left:0;top:65px}.float-bottom{right:0;bottom:55px}.category-showcase{grid-template-columns:1fr 1fr;gap:10px}.category-tile{min-height:175px;padding:18px 14px}.category-tile h3{font-size:16px}.category-icon{width:50px;height:50px;font-size:27px;margin-bottom:14px}.download-card{flex-direction:column;align-items:flex-start}.download-qr{flex:auto;width:140px}.section{padding:48px 0}.screenshots{grid-template-columns:1fr}.hero-trust{gap:10px}.hero-actions .btn{width:100%}}
+
 </style>
 </head>
 
@@ -706,145 +738,41 @@ footer{
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-intro">
-      <span class="eyebrow">Thousands of UK clearance deals • 30%+ discounts</span>
-
-      <h1>Thousands of live UK clearance deals in one app</h1>
-
-      <p>
-        Clearza helps shoppers find 30%+ discounts across UK retailers, compare
-        savings quickly, and go directly to official retailer websites to complete purchases.
-      </p>
-
-      <ul class="hero-points">
-        <li>Browse thousands of live clearance deals from multiple UK retailers</li>
-        <li>Filter by retailer, category, search term, and biggest discount</li>
-        <li>See old price, current price, discount percentage, and savings clearly</li>
-        <li>Continue to official retailer websites to complete purchases</li>
-      </ul>
-
+      <span class="eyebrow">THE UK DEAL-DISCOVERY APP · 30%+ OFF</span>
+      <h1>Big discounts.<br><span class="accent">Better discoveries.</span></h1>
+      <p>Discover clearance deals from UK retailers in one place. Compare savings, find something worth buying, and shop directly with the retailer.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get Clearza on Google Play</a>
-        <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-        <a class="btn btn-secondary" href="#screenshots">View app screenshots</a>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get it on Google Play ↗</a>
+        <a class="btn btn-light" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store ↗</a>
       </div>
+      <div class="hero-trust"><span>✓ 30%+ discounts</span><span>✓ Multiple UK retailers</span><span>✓ Free to download</span></div>
     </div>
-
-    <div class="hero-side">
-      <div class="hero-panel">
-        <div class="hero-panel-card">
-          <h2 style="margin:0 0 10px; font-size:26px;">Active clearance-deal discovery app</h2>
-          <p style="margin:0; color:var(--text-dim); font-size:16px;">
-            Clearza is a working mobile app with live product feeds, real retailer
-            links, searchable deal listings, category filters, and direct retailer click-throughs.
-          </p>
-
-          <div class="metric-grid">
-            <div class="metric">
-              <span class="metric-kicker">Live deals</span>
-              <strong>Thousands</strong>
-              <span>of clearance products</span>
-            </div>
-
-            <div class="metric">
-              <span class="metric-kicker">Minimum discount</span>
-              <strong>30%+</strong>
-              <span>discount threshold</span>
-            </div>
-
-            <div class="metric">
-              <span class="metric-kicker">Retailer journey</span>
-              <strong>App → Retailer</strong>
-              <span>purchase completed off-site</span>
-            </div>
-
-            <div class="metric">
-              <span class="metric-kicker">Availability</span>
-              <strong>Android &amp; iOS live</strong>
-              <span>Google Play and Apple App Store</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="preview-stack">
-        <div class="preview-card">
-          <div class="preview-card-inner">
-            <div class="preview-top">
-              <div class="preview-box">
-                <img
-                  src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.aleksandr.clearza"
-                  alt="QR code to download Clearza on Google Play"
-                />
-              </div>
-
-              <div class="preview-copy">
-                <h3>Download Clearza on Google Play</h3>
-                <p>
-                  Clearza is now available on Google Play. Scan the QR code to open
-                  the official app listing on your Android phone.
-                </p>
-
-                <ol class="preview-steps">
-                  <li>Scan the code with your phone camera.</li>
-                  <li>Open the Clearza listing in Google Play.</li>
-                  <li>Tap <strong>Install</strong> to download the app.</li>
-                </ol>
-              </div>
-            </div>
-
-            <div class="preview-actions">
-              <a
-                class="btn btn-primary"
-                href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Get it on Google Play
-              </a>
-            </div>
-
-            <p class="preview-note">
-              Official Android release, available directly from Google Play.
-            </p>
-          </div>
-        </div>
-
-        <div class="preview-card">
-          <div class="preview-card-inner">
-            <div class="preview-top">
-              <div class="preview-box">
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fgb%2Fapp%2Fclearza%2Fid6761031027" alt="QR code to download Clearza on the Apple App Store" />
-              </div>
-
-              <div class="preview-copy">
-                <h3>Download Clearza on the App Store</h3>
-                <p>
-                  Clearza is now available on the Apple App Store. Download the official
-                  iOS release to discover live UK clearance deals on iPhone.
-                </p>
-
-                <ol class="preview-steps">
-                  <li>Open the Clearza listing on the Apple App Store.</li>
-                  <li>Tap <strong>Get</strong> to install the app.</li>
-                  <li>Browse live clearance deals on your iPhone.</li>
-                </ol>
-              </div>
-            </div>
-
-            <div class="preview-actions">
-              <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-            </div>
-
-            <p class="preview-note">
-              Official iOS release, available directly from the Apple App Store.
-            </p>
-          </div>
-        </div>
-      </div>
+    <div class="hero-visual" aria-label="Preview of Clearza mobile app">
+      <div class="visual-orb orb-one"></div><div class="visual-orb orb-two"></div>
+      <div class="phone-frame"><div class="phone-notch"></div><img src="assets/landing/home-screen.png" alt="Clearza app showing real clearance deals" /></div>
+      <div class="float-label float-top">Discover more. Spend less.</div>
+      <div class="float-label float-bottom"><strong>30%+ off</strong><small>Deals worth discovering</small></div>
     </div>
   </div>
 </section>
-
+<section class="showcase section" id="discover">
+  <div class="container">
+    <div class="section-head showcase-head"><div><span class="section-kicker">EXPLORE CLEARZA</span><h2>Real deals. Real discoveries.</h2><p class="lead">Browse offers across your favourite categories, compare discounts and head straight to the retailer.</p></div><a class="text-link" href="#screenshots">See the app in action →</a></div>
+    <div class="category-showcase">
+      <a class="category-tile" href="#screenshots"><div class="category-icon">⌂</div><h3>Home &amp; living</h3><p>Find a better deal for your space</p></a>
+      <a class="category-tile" href="#screenshots"><div class="category-icon">◈</div><h3>Gaming &amp; tech</h3><p>Discover savings on favourites</p></a>
+      <a class="category-tile" href="#screenshots"><div class="category-icon">✦</div><h3>Style &amp; accessories</h3><p>Explore standout offers</p></a>
+      <a class="category-tile" href="#screenshots"><div class="category-icon">✳</div><h3>Hobbies &amp; more</h3><p>Something new to discover</p></a>
+    </div>
+  </div>
+</section>
+<section class="download-section section" id="download">
+ <div class="container"><div class="section-head download-head"><span class="section-kicker">AVAILABLE NOW</span><h2>Your next great find starts here.</h2><p class="lead">Get Clearza on your phone. Choose your store or scan the QR code.</p></div>
+ <div class="download-grid">
+  <div class="download-card"><div class="download-qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.aleksandr.clearza" alt="QR code for Clearza on Google Play" loading="lazy" /></div><div><span class="store-eyebrow">FOR ANDROID</span><h3>Google Play</h3><p>Scan with your Android phone or open the official listing.</p><a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get it on Google Play ↗</a></div></div>
+  <div class="download-card"><div class="download-qr"><img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fgb%2Fapp%2Fclearza%2Fid6761031027" alt="QR code for Clearza on the Apple App Store" loading="lazy" /></div><div><span class="store-eyebrow">FOR IPHONE</span><h3>Apple App Store</h3><p>Scan with your iPhone or open the official listing.</p><a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store ↗</a></div></div>
+ </div></div>
+</section>
 <section id="about" class="section">
   <div class="container">
     <div class="section-head">
@@ -1103,23 +1031,6 @@ footer{
         Clearza aggregates live clearance deals and directs users to official retailer
         websites to complete purchases.
       </p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="cta">
-      <h2>Clearza is available on Google Play and the App Store</h2>
-      <p>
-        Download Clearza on Android or iPhone to explore UK clearance deals.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get Clearza on Google Play</a>
-        <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-        <a class="btn btn-secondary" href="#screenshots">See the app</a>
-      </div>
     </div>
   </div>
 </section>
