@@ -76,10 +76,18 @@ header{
   white-space:nowrap;
 }
 
-.logo img{
+.logo-mark{
   width:42px;
   height:42px;
   border-radius:10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+  font-size:25px;
+  font-weight:900;
+  color:#fff;
+  background:var(--teal);
 }
 
 nav{
@@ -107,6 +115,7 @@ nav a:hover{
 .hero-grid{
   display:grid;
   grid-template-columns:1.08fr 0.92fr;
+  grid-template-areas:"intro panel" "downloads downloads";
   gap:28px;
   align-items:start;
 }
@@ -182,9 +191,15 @@ nav a:hover{
 }
 
 .hero-side{
-  display:grid;
-  gap:18px;
+  display:contents;
 }
+
+.hero-intro{grid-area:intro;}
+.hero-panel{grid-area:panel; margin-top:42px;}
+.preview-stack{grid-area:downloads; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:stretch; margin-top:6px;}
+.preview-card{height:100%;}
+.preview-card-inner{height:100%; display:flex; flex-direction:column;}
+.preview-actions{margin-top:auto; padding-top:18px;}
 
 .hero-panel{
   background:linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
@@ -579,7 +594,6 @@ footer{
 }
 
 @media (max-width: 980px){
-  .hero-grid,
   .cards,
   .trust-grid,
   .screenshots{
@@ -598,6 +612,9 @@ footer{
     flex-direction:column;
     align-items:flex-start;
   }
+  .hero-grid{grid-template-columns:1fr;grid-template-areas:"intro" "panel" "downloads";}
+  .hero-panel{margin-top:12px;}
+  .preview-stack{grid-template-columns:1fr;}
 }
 
 @media (max-width: 720px){
@@ -671,7 +688,7 @@ footer{
 <header>
   <div class="container nav">
     <div class="logo">
-      <img src="assets/images/icon.png" alt="Clearza app icon" />
+      <span class="logo-mark" aria-hidden="true">C</span>
       <span>Clearza</span>
     </div>
 
@@ -688,7 +705,7 @@ footer{
 
 <section class="hero">
   <div class="container hero-grid">
-    <div>
+    <div class="hero-intro">
       <span class="eyebrow">Thousands of UK clearance deals • 30%+ discounts</span>
 
       <h1>Thousands of live UK clearance deals in one app</h1>
@@ -707,8 +724,8 @@ footer{
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get Clearza on Google Play</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
         <a class="btn btn-secondary" href="#screenshots">View app screenshots</a>
-        <a class="btn btn-secondary" href="#contact">Retailer contact</a>
       </div>
     </div>
 
@@ -742,8 +759,8 @@ footer{
 
             <div class="metric">
               <span class="metric-kicker">Availability</span>
-              <strong>Android live</strong>
-              <span>iOS testing in progress</span>
+              <strong>Android &amp; iOS live</strong>
+              <span>Google Play and Apple App Store</span>
             </div>
           </div>
         </div>
@@ -795,34 +812,31 @@ footer{
         <div class="preview-card">
           <div class="preview-card-inner">
             <div class="preview-top">
-              <div class="apple-badge" aria-hidden="true">
-                <div class="apple-badge-label">Apple</div>
-                <div class="apple-badge-sub">TestFlight</div>
+              <div class="preview-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&amp;data=https%3A%2F%2Fapps.apple.com%2Fgb%2Fapp%2Fclearza%2Fid6761031027" alt="QR code to download Clearza on the Apple App Store" />
               </div>
 
               <div class="preview-copy">
-                <h3>iPhone &amp; iPad testing via TestFlight</h3>
+                <h3>Download Clearza on the App Store</h3>
                 <p>
-                  Clearza is also available for iOS testing through Apple TestFlight. The
-                  iOS build is active and ready for reviewer, retailer, and partner testing.
+                  Clearza is now available on the Apple App Store. Download the official
+                  iOS release to discover live UK clearance deals on iPhone.
                 </p>
 
                 <ol class="preview-steps">
-                  <li>Install Apple TestFlight from the App Store.</li>
-                  <li>Use an invited Apple ID to access the Clearza build.</li>
-                  <li>Open the app and test the live browsing experience on iPhone or iPad.</li>
+                  <li>Open the Clearza listing on the Apple App Store.</li>
+                  <li>Tap <strong>Get</strong> to install the app.</li>
+                  <li>Browse live clearance deals on your iPhone.</li>
                 </ol>
               </div>
             </div>
 
             <div class="preview-actions">
-              <a class="btn btn-primary" href="mailto:contact@clearza.uk">Request iOS access</a>
-              <a class="btn btn-secondary" href="#contact">Business contact</a>
+              <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
             </div>
 
             <p class="preview-note">
-              iOS preview is distributed through Apple TestFlight. Access can be arranged
-              through <strong>contact@clearza.uk</strong>.
+              Official iOS release, available directly from the Apple App Store.
             </p>
           </div>
         </div>
@@ -1096,16 +1110,15 @@ footer{
 <section class="section">
   <div class="container">
     <div class="cta">
-      <h2>Clearza is available on Google Play</h2>
+      <h2>Clearza is available on Google Play and the App Store</h2>
       <p>
-        Download Clearza for Android to explore UK clearance deals. iPhone and iPad
-        testing is in progress through Apple TestFlight.
+        Download Clearza on Android or iPhone to explore UK clearance deals.
       </p>
 
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.aleksandr.clearza" target="_blank" rel="noopener noreferrer">Get Clearza on Google Play</a>
+        <a class="btn btn-primary" href="https://apps.apple.com/gb/app/clearza/id6761031027" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
         <a class="btn btn-secondary" href="#screenshots">See the app</a>
-        <a class="btn btn-secondary" href="#contact">Business contact</a>
       </div>
     </div>
   </div>
